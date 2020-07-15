@@ -59,16 +59,8 @@ function parar (texto: string) {
     rgbEstaEncendido = 0
     maqueen.motorStop(maqueen.Motors.All)
     rgb.showColor(neopixel.colors(NeoPixelColors.Black))
-    basic.showLeds(`
-        # . . . #
-        . # . # .
-        . . # . .
-        . # . # .
-        # . . . #
-        `)
     maqueen.writeLED(maqueen.LED.LEDLeft, maqueen.LEDswitch.turnOff)
     maqueen.writeLED(maqueen.LED.LEDRight, maqueen.LEDswitch.turnOff)
-    basic.pause(2000)
     basic.showLeds(`
         . . . . .
         . . . . .
