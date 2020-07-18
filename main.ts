@@ -42,6 +42,9 @@ maqueen.IR_callbackUser(function (ir) {
         rgbEstaEncendido = 1
         rgb.showColor(neopixel.colors(NeoPixelColors.Blue))
     }
+    if (ir == 40) {
+        rgbEstaEncendido = 0
+    }
 })
 function alante (texto: string) {
     basic.showLeds(`
@@ -56,9 +59,7 @@ function alante (texto: string) {
     maqueen.writeLED(maqueen.LED.LEDRight, maqueen.LEDswitch.turnOn)
 }
 function parar (texto: string) {
-    rgbEstaEncendido = 0
     maqueen.motorStop(maqueen.Motors.All)
-    rgb.showColor(neopixel.colors(NeoPixelColors.Black))
     maqueen.writeLED(maqueen.LED.LEDLeft, maqueen.LEDswitch.turnOff)
     maqueen.writeLED(maqueen.LED.LEDRight, maqueen.LEDswitch.turnOff)
     basic.showLeds(`
