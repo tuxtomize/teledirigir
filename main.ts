@@ -1,10 +1,16 @@
 function abrir () {
     servos.P1.setAngle(76)
     servos.P2.setAngle(0)
+    basic.pause(1000)
+    servos.P1.stop()
+    servos.P2.stop()
 }
 function cerrar () {
     servos.P1.setAngle(35)
     servos.P2.setAngle(38)
+    basic.pause(1000)
+    servos.P1.stop()
+    servos.P2.stop()
 }
 function derecha (texto: string) {
     basic.showLeds(`
@@ -19,7 +25,12 @@ function derecha (texto: string) {
     maqueen.writeLED(maqueen.LED.LEDRight, maqueen.LEDswitch.turnOn)
 }
 maqueen.IR_callbackUser(function (ir) {
-    basic.showNumber(ir)
+    if (ir == 177) {
+        abrir()
+    }
+    if (ir == 176) {
+        cerrar()
+    }
     if (ir == 64) {
         alante("")
     }
