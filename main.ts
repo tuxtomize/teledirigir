@@ -31,38 +31,38 @@ maqueen.IR_callbackUser(function (ir) {
     if (ir == 176) {
         cerrar()
     }
-    if (ir == 64) {
+    if (ir == 76) {
         alante("")
     }
-    if (ir == 68) {
+    if (ir == 30) {
         parar("")
     }
-    if (ir == 65) {
+    if (ir == 20) {
         atras("")
     }
-    if (ir == 7) {
+    if (ir == 10) {
         izquierda("")
     }
-    if (ir == 6) {
+    if (ir == 14) {
         derecha("")
     }
-    if (ir == 114) {
+    if (ir == 25) {
         rgbEstaEncendido = 1
         rgb.showColor(neopixel.colors(NeoPixelColors.Red))
     }
-    if (ir == 113) {
+    if (ir == 27) {
         rgbEstaEncendido = 1
         rgb.showColor(neopixel.colors(NeoPixelColors.Green))
     }
-    if (ir == 99) {
+    if (ir == 21) {
         rgbEstaEncendido = 1
         rgb.showColor(neopixel.colors(NeoPixelColors.Yellow))
     }
-    if (ir == 97) {
+    if (ir == 17) {
         rgbEstaEncendido = 1
         rgb.showColor(neopixel.colors(NeoPixelColors.Blue))
     }
-    if (ir == 40) {
+    if (ir == 13) {
         rgbEstaEncendido = 0
     }
 })
